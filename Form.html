@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="Form.css" />
+  <title>Form</title>
+</head>
+<body style="display: flex; justify-content:center ; align-items: center;height: 100vh;overflow: hidden;">
+    <div class="main-container">
+        <div class="container">
+          <form name="form1" class="box" method="post" onsubmit="return redirectToGitHub()">
+            <h4>Connexion</h4>
+            <h5>Connecte toi à ton compte.</h5>
+            <input type="text" name="email" placeholder="Votre Email" autocomplete="off" />
+            <input type="password" name="password" placeholder="Mot de passe" id="pwd" autocomplete="off" />
+            <a href="#" class="mdpoublier">Mot de passe oublié?</a>
+            <button type="submit" class="btn1">Se connecter</button>
+          </form>
+        </div>
+
+        <div class="explanation">
+            <h2>Explication du Code</h2>
+            <p>
+                Ce formulaire de connexion vous redirige vers ma page GitHub lorsque l'on clique sur le bouton "Se connecter". Le script JavaScript "redirectToGitHub()" est exécuté lors de la soumission du formulaire, ce qui empêche l'envoi réel du formulaire et redirige vers l'URL indiqué.
+            </p>
+        </div>
+    </div>
+    <script src="Form.js"></script>
+    <script>
+      function redirectToGitHub() {
+          window.location.href = "https://github.com/tonnomutilisateur";
+          return false; // Empêche que le formulaire s'envoi réellement
+      }
+    </script>
+</body>
+</html>
